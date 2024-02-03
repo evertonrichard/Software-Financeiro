@@ -15,8 +15,7 @@ git clone https://github.com/evertonrichard/Software-Financeiro
 
 Para manter um ambiente consistente de desenvolvimento, é importante estar ciente das versões das ferramentas utilizadas no projeto:
 
-- Bootstrap: Versão X.X.X
-- jQuery: Versão X.X.X
-- Vanilla JS: Versão X.X.X
+- Bootstrap: Versão 5.3.2
+- jQuery: Versão 3.7.1
 
 É recomendável que você verifique se está utilizando as versões mais recentes das ferramentas para garantir compatibilidade e aproveitar as últimas funcionalidades disponíveis.
