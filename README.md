@@ -11,3 +11,12 @@ O Projeto poderá ser usado ultilizado em windowns ou linux usando o visual stud
 ```
 git clone https://github.com/evertonrichard/Software-Financeiro
 ```
+## 2. Versões das Ferramentas Utilizadas
+
+Para manter um ambiente consistente de desenvolvimento, é importante estar ciente das versões das ferramentas utilizadas no projeto:
+
+- Bootstrap: Versão X.X.X
+- jQuery: Versão X.X.X
+- Vanilla JS: Versão X.X.X
+
+É recomendável que você verifique se está utilizando as versões mais recentes das ferramentas para garantir compatibilidade e aproveitar as últimas funcionalidades disponíveis.
