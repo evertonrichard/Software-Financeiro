@@ -22,3 +22,11 @@ Para manter um ambiente consistente de desenvolvimento, é importante estar cien
 ```
 git clone https://github.com/evertonrichard/Software-Financeiro
 ```
+
+- Após clona o repositório, entre dentro da pasta.
+```
+cd Software-Financeiro
+```
+- Entrando dentro da pasta, abra seu projeto com o Visual Studio Code e use o go live.
+
+
