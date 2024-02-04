@@ -16,7 +16,7 @@ Para manter um ambiente consistente de desenvolvimento, é importante estar cien
 
 É recomendável que você verifique se está utilizando as versões mais recentes das ferramentas para garantir compatibilidade e aproveitar as últimas funcionalidades disponíveis.
 
-## 3. Isntruções para rodar o software.
+## 3. Instruções para rodar o software.
 
 - Clonar o projeto de https://github.com/evertonrichard/Software-Financeiro em uma pasta
 ```
