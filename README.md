@@ -34,11 +34,11 @@ cd Software-Financeiro
 ```
 git checkout -b feature/<nome-da-branch>
 ```
-## 4. Subida para o Ambiente de Homologação
+## 5. Subida para o Ambiente de Homologação
 
 Este projeto não tem ambiente de homologação!!! (TODO: criar ambiente de homologação e pipeline automatizada a partir da branch homolog)
 
-## 5. Subida para o Ambiente de Produção
+## 6. Subida para o Ambiente de Produção
 
 A subida para o ambiente de produção ocorre quando a branch master é atualizada. Portanto, para que isso ocorra, deve ser aberto um Pull Request (PR) da branch criada para o trabalho em master. Basta que o PR seja aprovado, que com a atualização da branch master, o ambiente de produção é atualizado automaticamente através de uma pipeline.
 
