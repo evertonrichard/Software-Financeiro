@@ -13,6 +13,7 @@ Para manter um ambiente consistente de desenvolvimento, é importante estar cien
 
 - Bootstrap: Versão 4.5.2
 - jQuery: Versão 3.7.1
+- Chartjs: Versão 3.7.0
 
 É recomendável que você verifique se está utilizando as versões mais recentes das ferramentas para garantir compatibilidade e aproveitar as últimas funcionalidades disponíveis.
 
