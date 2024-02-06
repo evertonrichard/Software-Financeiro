@@ -9,7 +9,7 @@ O Projeto poderá ser ultilizado em windowns ou linux usando o visual studio cod
 
 ## 2. Versões das Ferramentas Utilizadas
 
-Para manter um ambiente consistente de desenvolvimento, é importante estar ciente das versões das ferramentas utilizadas abaixo no projeto:
+Para manter um ambiente consistente de desenvolvimento, é importante estar ciente das versões e ferramentas utilizadas abaixo no projeto:
 
 - Bootstrap: Versão 4.5.2
 - jQuery: Versão 3.7.1
