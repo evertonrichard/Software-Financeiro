@@ -43,4 +43,10 @@ Este projeto não tem ambiente de homologação!!! (TODO: criar ambiente de homo
 
 A subida para o ambiente de produção ocorre quando a branch master é atualizada. Portanto, para que isso ocorra, deve ser aberto um Pull Request (PR) da branch criada para o trabalho em master. Basta que o PR seja aprovado, que com a atualização da branch master, o ambiente de produção é atualizado automaticamente através de uma pipeline.
 
+## Dados do Desenvolvedor 
+
+- Everton Richard da silva
+- Celular / Whatsapp:  [+11968128231](https://wa.me/11968128231)
+- E-mail: evertonrichard444@gmail.com
+- Linkedin: https://www.linkedin.com/in/everton-richard-349a2b254/
 
