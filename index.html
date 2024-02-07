@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Financeiro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <h1 class="titulo-nav">Unecash Nation</h1>
+        <div class="usuario">
+        <i class='bx bx-user nav_icon'></i>
+        <span class="nav_name">Super Admin</span>
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <i class='bx bx-grid-alt nav_icon'></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-save nav_icon'></i>
+                        <span class="nav_name">Costumers</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-message-square-detail nav_icon'></i>
+                        <span class="nav_name">Projects</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-user nav_icon'></i>
+                        <span class="nav_name">Orders</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-folder nav_icon'></i>
+                        <span class="nav_name">Inventory</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class='bx bx-paste  nav_icon'></i>
+                        <span class="nav_name">Accounts</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav_link">
+                <i class='bx bx-log-out nav_icon'></i>
+                <span class="nav_name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+      <div class="titulo">
+        <h2>Olá Admin</h2>
+        <h3>Aqui estão as informações do financeiro.</h3>
+        </div>
+        <div class="filter-container">
+            <select id="month">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="year">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+            </select>
+            <select id="quarter">
+              <option value="Q1">1 Trimestre</option>
+              <option value="Q2">2 Trimestre</option>
+              <option value="Q3">3 Trimestre</option>
+              <option value="Q4">4 Trimestre</option>
+            </select>
+            <button id="filter-Button" onclick="filterData()">Filtrar</button>
+          </div>
+          <main class="max-width">
+            <div class="Container-Dashboard">
+                <div class="top-containers">
+                    <div class="containers" id="valor-notas-container">
+                        <h4>Total das notas emitidas</h4>
+                        <p class="p-blue" id="valor-notas">R$ 1,500.00</p>
+                    </div>
+                    <div class="containers" id="valor-sem-cobranca-container">
+                        <h4>Total de notas emitidas sem cobrança</h4>
+                        <p class="p-blue" id="valor-sem-cobranca">R$ 1,200.00</p>
+                    </div>
+                    <div class="containers" id="valor-vencidas-container">
+                        <h4>Total das notas vencidas</h4>
+                        <p class="p-blue" id="valor-vencidas">R$ 2,350.00</p>
+                    </div>
+                </div>
+                <div class="bottom-containers">
+                    <div class="containers" id="valor-vencer-container">
+                        <h4>Total a vencer</h4>
+                        <p class="p-blue" id="valor-vencer">R$ 3,000.00</p>
+                    </div>
+                    <div class="containers" id="valor-pagas-container">
+                        <h4>Total das notas pagas</h4>
+                        <p class="p-blue" id="valor-pagas">R$ 4,000.00</p>
+                    </div>
+                </div>
+            </div>  
+          </div>
+          </main>
+          <div class="container-pai">
+            <div class="display-flex">
+                <div class="container-grafico">
+                    <h1 class="sistema-financeiro">Gráfico evolução da inadimplência</h1>
+                    <div id="dashboard1" class="grafico-container">
+                        <canvas id="graficoNotasFiscais"></canvas>
+                    </div>
+                </div>
+                <div class="container-grafico">
+                    <h1>Gráfico evolução recebimento de receitas</h1>
+                    <div id="dashboard2" class="grafico-container">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        <main class="filtros-tabela">
+            <div id="filterContainer">
+                <h2 class="listas-h2">Listas das notas fiscais</h2>
+              <div class="filterGroup">
+                <label for="mesEmissao">Mês de Emissão da Nota:</label>
+                <input type="month" id="mesEmissao">
+              </div>
+              <div class="filterGroup">
+                <label for="mesCobranca">Mês da Cobrança:</label>
+                <input type="month" id="mesCobranca">
+              </div>
+              <div class="filterGroup">
+                <label for="mesPagamento">Mês do Pagamento:</label>
+                <input type="month" id="mesPagamento">
+              </div>
+              <div class="filterGroup statusFilter">
+                <label for="statusPagamento">Status do Pagamento:</label>
+                <select id="statusPagamento">
+                  <option value="">Selecione o Status</option>
+                  <option value="Emitida">Emitida</option>
+                  <option value="Cobrança realizada">Cobrança realizada</option>
+                  <option value="Pagamento em atraso">Pagamento em atraso</option>
+                  <option value="Pagamento realizado">Pagamento realizado</option>
+                </select>
+              </div>
+              <button id="filterButton">Filtrar</button>
+            </div>
+        
+            <div id="filteredResults">
+              <div class="justify-space">
+                <button id="exportButton">Exportar para Excel</button>
+              </div>
+              <table id="resultadosTabela">
+                <thead>
+                  <tr>
+                    <th>Nome do pagador</th>
+                    <th>identificador (ID)</th>
+                    <th>Data de emissão </th>
+                    <th>Data da cobrança</th>
+                    <th>Data do pagamento</th>
+                    <th>Valor da nota</th>
+                    <th>Documento fiscal</th>
+                    <th>Documento do boleto </th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+            </div>
+          </main>       
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+<script>
+  //codificação do menu dashboard responsivo
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+const toggle = document.getElementById(toggleId),
+nav = document.getElementById(navId),
+bodypd = document.getElementById(bodyId),
+headerpd = document.getElementById(headerId)
+
+// validação das veriaveis 
+if(toggle && nav && bodypd && headerpd){
+toggle.addEventListener('click', ()=>{
+// evento que mostra a side-bar assim que clicavel
+nav.classList.toggle('show')
+// evento que troca de icones do menu 
+toggle.classList.toggle('bx-x')
+// adicionar espaçamento no corpo
+bodypd.classList.toggle('body-pd')
+// adicionar espaçamento na header
+headerpd.classList.toggle('body-pd')
+})
+}
+}
+
+showNavbar('header-toggle','nav-bar','body-pd','header')
+
+/*===== link ativo =====*/
+const linkColor = document.querySelectorAll('.nav_link')
+
+function colorLink(){
+if(linkColor){
+linkColor.forEach(l=> l.classList.remove('active'))
+this.classList.add('active')
+}
+}
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+
+});
+</script>
+
+
+   

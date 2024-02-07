@@ -1,0 +1,16 @@
+{
+    "clientes": [
+      {
+        "nomePagador": "João Silva",
+        "identificacaoNota": "123456789",
+        "dataEmissaoNota": "01/02/2023",
+        "dataCobranca": "10/03/2023",
+        "dataPagamento": "05/02/2023",
+        "valorNota": "R$100,00",
+        "docNotaFiscal": "12345",
+        "docBoleto": "67890",
+        "statusNota": "Emitida"
+      }
+    ]
+  }
+  

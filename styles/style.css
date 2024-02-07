@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --first-color-light: #AFA5D9;
+  --white-color: #F7F6FB;
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
+ 
+}
+
+/*formatação da nav e nav-sidebar*/
+
+.titulo-nav{
+  flex: auto;
+  display: flex;
+  padding-left: 10px;
+}
+
+
+.titulo {
+  gap: 30px;
+  padding-top: 7px;
+}
+
+.titulo h3 {
+  color: #2F3329;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+}
+
+.titulo-nav{
+  color: #2F3329;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+  
+
+}
+.titulo h3 {
+  padding-bottom: 40px;
+}
+
+.titulo h2 {
+  color: #272727;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+  padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  transition: .5s;
+}
+
+.header_toggle {
+  color: #329cd0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.usuario{
+    display: flex;
+    gap: 20px;
+}
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: #329cd0;
+  padding: .5rem 1rem 0 0;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem;
+}
+
+.nav_link {
+  position: relative;
+  color: white;
+  margin-bottom: 1.5rem;
+  transition: .3s;
+}
+
+.nav_link:hover {
+  color: black;
+}
+
+.nav_icon {
+  font-size: 1.25rem;
+}
+
+.show {
+  left: 0;
+}
+
+.body-pd {
+  padding-left: calc(var(--nav-width) + 1rem);
+}
+
+.active {
+  color: var(--white-color);
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: var(--white-color);
+}
+
+/* formatação dos graficos*/
+
+.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-grafico {
+  width: 50%; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.grafico-container {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.container-grafico h1{
+  color: #272727;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: center;
+
+}
+
+/*Formatação dos containers dashboard de valores*/
+
+.Container-Dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  height: 100%;
+  padding-bottom: 70px;
+}
+
+.top-containers,
+.bottom-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 40px;
+}
+
+.containers {
+  width: 310px;
+  height: 130px;
+  border-radius: 10px;
+  border: 1px solid #D6D6D6;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containers h4 {
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+
+/*Formatação dos filtros*/
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.filter-container select {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.filter-container button {
+  padding: 10px 20px;
+  background-color: #329cd0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-container button:hover {
+  background-color: #0056b3;
+}
+
+/*Formatação da funcionalidade lista de notas fiscais*/
+
+.filtros-tabela{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#filterContainer {
+  text-align: center;
+  margin: 20px;
+}
+
+.filterGroup {
+  margin-bottom: 20px;
+}
+
+.filterGroup label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.filterGroup select,
+.filterGroup input[type="month"] {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+}
+
+.filterGroup.statusFilter {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+#filterButton, #exportButton {
+  padding: 6px 20px;
+  background-color: #329cd0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#filteredResults {
+  display: none; 
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  overflow-x: auto; 
+}
+
+#filteredResults table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#filteredResults th, #filteredResults td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#filteredResults th {
+  background-color: #329cd0;
+  color: #fff;
+}
+
+#filteredResults td {
+  background-color: #f9f9f9;
+}
+
+.justify-space{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.listas-h2{
+  padding-bottom: 20px;
+}
+
+/*Formatação do loop carregando dashboard*/
+
+.spinner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 255, 0.1);
+  border-left-color: #329cd0;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+#loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+
+/* Formatação do menu dashboard responsivo */
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+  }
+
+  .header_img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header_img img {
+    width: 45px;
+  }
+
+  .l-navbar {
+    left: 0;
+    padding: 1rem 1rem 0 0;
+  }
+
+  .show {
+    width: calc(var(--nav-width) + 156px);
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+}
+
+
+
