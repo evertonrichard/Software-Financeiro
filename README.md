@@ -29,7 +29,7 @@ git clone https://github.com/evertonrichard/Software-Financeiro
 ```
 cd Software-Financeiro
 ```
-- Entrando dentro da pasta, abra seu projeto com o Visual Studio Code e use o Go live.
+- Entrando dentro da pasta, abra seu projeto com o Visual Studio Code e use o Go live, usando a extensão Live Server
 
 -  Criar uma branch para trabalho, onde você vai trabalhar nela e fazer correções de bugs.
 ```
